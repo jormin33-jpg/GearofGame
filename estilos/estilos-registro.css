@@ -1,0 +1,184 @@
+*
+{
+    /*box-sizing, calcula el ancho y el alto total de un elemento*/
+	box-sizing: border-box;
+}
+body
+{
+	font-family: 'roboto', sans-serif;
+	background: #e5e5e5;
+}
+/*main para representar el contenido principal del body*/
+main
+{
+   max-width: 800px;
+   width: 90%;
+   margin: auto;
+   padding: 40px;
+}
+.formulario
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap:30px;
+	background-color: rgba(5, 5, 5, 0.568);
+}
+.formulario_label
+{
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+.formulario_grupo-input
+{
+    /* position: relative;, cuando el elemento esta 
+    posicionado de acuerdo al flujo nomal*/
+	position: relative;
+}
+.formulario_input
+{
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	/*transition: permite cambiar los valores de propiedades sin problemas*/
+	transition: .10s ease all;
+}
+.formulario_input:focus
+{
+	border: 3px solid #0075ff;
+	/*outline: sirve para establecer una o mas propiedades individuales*/
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(153,153,153,153);
+}
+.formulario_input-error
+{
+	font-size: 12px;
+	margin-bottom: 0px;
+    display: none;
+}
+.formulario_input-error-activo
+{
+	display: block;
+}
+.formulario_validacion-estado
+{
+    /*positio:absolute;la posicion del elemento es removide del flujo normal*/
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	/*z-index: 100px; los elementos se superponen*/
+	z-index: 100px;
+	/*opacity: 0; define la p transpartencia de un elemento entre 0 y 1*/
+	opacity: 0;
+}
+.formulario_select
+{
+	margin-right: 15px;
+}
+.formulario_grupo-terminos, .formulario_mensaje, .formulario_grupo-btn
+{
+	grid-column: span 2;
+}
+.formulario_mensaje
+{
+ height: 45px;
+ line-height: 45px;
+ background: #f66060;
+ padding: 0 15px;
+ border-radius: 3px;
+ display: none;
+}
+.formulario_mensaje-activo
+{	
+	display: block;
+}
+.formulario_mensaje p
+{
+	margin: 0;
+}
+.formulario_grupo-btn
+{
+    /*fles hace que el elemento se coloque vertical(column) o
+    horizontal(row)*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.formulario_btn
+{
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: rgb(0, 0, 0);
+	color:rgb(0, 247, 247);
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+.formulario_btn:hover
+{
+	box-shadow: 3px 0px 30px rgba(163, 163,163,1)
+}
+.formulario_mensaje-exito
+{
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+.formulario_mensaje-exito-activo
+{
+	display: block;
+}
+/*estilos para la validacion*/
+.formulario_grupo-correcto .formulario_validacion-estado
+{
+	color: #1ed12d;
+	opacity: 1;
+}
+.formulario_grupo-incorrecto .formulario_label
+{
+	color: #bb2929;
+}
+.formulario_grupo-incorrecto .formulario_validacion-estado
+{
+	color: #bb2929;
+	opacity: 1;
+	bottom: 40px;
+	
+}
+.formulario_grupo-incorrecto .formulario_input
+{
+	
+	border: 3px solid #bb2929;
+}
+
+/*------------  MEDIAQUERIES ----------*/
+@media screen and (max-width: 800px)
+{
+	.formulario
+	{
+		grid-template-columns: 1fr;
+	}
+	.formulario_grupo-terminos, 
+	.formulario_mensaje, 
+	.formulario_grupo-btn
+	{
+		grid-column: 1;
+	}
+	.formulario_btn
+	{
+		width: 100%;
+	}
+	body
+	{
+		font-size: .5em;
+	}
+}
+

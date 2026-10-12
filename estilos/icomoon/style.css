@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?kns60h');
+  src:  url('fonts/icomoon.eot?kns60h#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?kns60h') format('truetype'),
+    url('fonts/icomoon.woff?kns60h') format('woff'),
+    url('fonts/icomoon.svg?kns60h#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-noticias:before {
+  content: "\e900";
+}
+.icon-servicios:before {
+  content: "\e901";
+}
+.icon-hadware:before {
+  content: "\e902";
+}
+.icon-aspectos:before {
+  content: "\e903";
+}
+.icon-tienda:before {
+  content: "\e904";
+}
+.icon-juegos:before {
+  content: "\e905";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-abajo:before {
+  content: "\ea3e";
+}

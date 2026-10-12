@@ -1,0 +1,350 @@
+h1,h2,h3,h4,h5, button{
+    font-family: 'Bitter', serif;
+}
+
+
+/*MENU*/
+
+*
+{
+	padding: 0;
+	margin: 0;
+	/*incluir el relleno y el borde en el ancho y alto total de un elemento*/
+	box-sizing: border-box;
+}
+body
+{
+	background: url(../img/imgindex/fondo.jpg);
+}
+.menu_bar
+{
+	display: none;
+}
+header
+{
+	width: 100%;
+
+}
+header nav
+{
+	background: #000000bb;
+	/*que va tener posicionado 1000, el menu va estar arriba de los dmas elementos*/
+	z-index: 1000;
+	width: 95%;
+	margin: 20px auto;
+
+}
+header nav ul
+{
+	list-style-type: none;
+    text-align: center;
+}
+header nav ul li
+{
+	display: inline-block;
+	/*para menu desplegables*/
+	position: relative;
+	/*para los submenus*/
+    
+}
+header nav ul li:hover
+{
+	background: #000000bb;
+}
+header nav ul li a:hover
+{
+    color: rgba(2, 245, 233, 0.938);
+}
+header nav ul li a
+{
+	color: rgb(255, 255, 255);
+	display: block;
+	text-decoration: none;
+	padding: 20px;
+    
+}
+header nav ul li a span
+{
+    /*espacio entre los iconos y menus*/
+	margin-right: 10px;
+}
+header nav ul li:hover .children
+{
+	display: block;
+}
+header nav ul li .children
+{
+	display: none;
+	background: #000000bb;
+	position: absolute;
+	width: 150%;
+	z-index: 1000;
+}
+header nav ul li .children li
+{
+	display: block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(2, 245, 233, 0.938);
+}
+header nav ul li .children li a 
+{
+	display: block;
+}
+header nav ul li .children li a span
+{
+	float: right;
+	position: relative;
+	top: 3px;
+	margin-right: 0;
+	margin-left: 10px;
+}
+header nav ul li .caret
+{
+	position: relative;
+	top: 3px;
+	margin-left: 10px;
+	margin-right: 0px;
+
+}
+
+#separator-menu{
+    width: 100%;
+    height: 200px;
+    background: url(../img/imgindex/menu.png);
+}
+
+@media screen and (max-width: 800px)
+{
+   body
+   {
+   	  padding-top: 80px;
+   }
+   #separator-menu{
+    width: auto;
+    height: auto;
+    background: url(../img/imgindex/nav1.jpg);
+    }
+   .menu_bar
+   {
+   	  display: block;
+   	  min-width: 100%;
+   	  position: fixed;
+   	  top: 0;
+   	  background: #000000;
+   }	
+   .menu_bar .bt-menu
+   {
+   	  display: block;
+   	  padding: 20px;
+   	  color: #fff;
+   	  overflow: hidden;
+   	  font-size: 25px;
+   	  font-weight: bold;
+   	  text-decoration: none;
+   }
+   .menu_bar span
+   {
+   	  float: right;
+   	  font-size: 40px;
+   }
+   header nav
+   {
+   	  width: 80%;
+   	  height: calc(100% - 80px);
+   	  /* permanece en el mismo lugar incluso si se desplaza la página*/
+   	  position: fixed;
+   	  right:  100%;
+   	  margin: 0;
+   	  overflow: scroll;
+   }
+   
+   header nav ul li
+   {
+   	  display: block;
+   	  border-bottom: 1px solid rgba(2, 245, 233, 0.938)
+
+   }
+   header nav ul li a
+   {
+   	display: block;
+   }
+   header nav ul li:hover .children
+   {
+       display: none;
+   }
+   header nav ul li .children
+   {
+   	  width: 100%;
+   	  position: relative;
+   }
+   header nav ul li .children li a
+   {
+   	  margin-left: 20px;
+   }
+   header nav ul li .caret
+   {
+   	  float: right;
+   }
+   .card .card-img1{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+   }
+   .card{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+   }
+}
+
+
+/*separador*/
+#separador-carusel{
+    width: 100%;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+/*NAVBAR*/
+
+#navbar{
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.822);
+    
+}
+/*LISTON*/
+#liston{
+    background-color: rgb(219, 26, 26);
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(131, 21, 21, 0.5) 25px, rgba(131, 21, 21, 0.5) 40px);
+}
+#liston::after{
+    content: '';
+    background-color: transparent;
+    display: block;
+    height: 20px;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    left: auto;
+    margin-top: -40px;
+}
+#separator-liston{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+#separator-liston .content{
+    width: 150%;
+    height: 100px;
+    margin-left: -25%;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+    background:rgba(0, 0, 0, 0.712);
+}
+#mes{
+    background-color: rgb(219, 26, 26);
+    position: relative;
+    margin-top: -20px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+#mes img{
+    position: relative;
+    margin-top: -50px;
+}
+
+
+
+/*Tarjetas*/
+#games{
+    background: rgb(243, 0, 0);
+    background: url(../img/imgindex/),  linear-gradient(0deg, rgba(0, 0, 0, 0.747) 0%, rgba(163, 159, 159, 0.568) 57%);
+    background-repeat: repeat-x;
+    background-size: 75%;
+    margin-top: -20px;
+}
+
+.card-border{
+    border: solid 10px rgb(8, 8, 8);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease-out 0.2s;
+}
+.card-border:hover{
+    transform: scale(1.05);
+}
+.card-body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.text-shadow{
+    text-shadow: 0 3px 3px rgba(0,0,0,0.6);
+}
+#separator-figuras{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+#separator-figuras .content{
+    background: url(../img/bg-03.png);
+    width: 110%;
+    height: 100px;
+    margin-left: -5%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+#separator-figuras-footer{
+    height: 20vw;
+}
+
+
+
+
+#footer{
+    background: url(../img/bg-04.png);
+    background-color: rgb(32, 32, 31);
+    background-size: 50px 50px;
+    color: white;
+}
+
+.card .card-body{
+    background-color: rgba(0, 0, 0, 0.815);
+    color:white;
+}
+.card{
+    background-color: rgba(255, 255, 255, 0);
+}
+.card .card-img1{
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+}
+.card .card-title1{
+    font-size: 75px;
+    color: white;
+}
+.card .card-text1{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/*.card{
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+}*/
+.form-floating{
+    width: 40%;
+    margin: auto;
+    background-color: rgba(255, 255, 0, 0);
+}
+.btn{
+    margin: auto;
+}
